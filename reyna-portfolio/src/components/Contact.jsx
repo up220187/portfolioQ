@@ -26,7 +26,7 @@ export default function Contact() {
 
           {/* Botón principal */}
           <a
-            href="mailto:tuemail@gmail.com"
+            href="mailto:reyna.martinez.gmz@gmail.com"
             className="inline-block bg-accent px-8 py-4 rounded-2xl font-medium hover:bg-accentSoft transition-all duration-300 shadow-lg hover:shadow-accent/30"
           >
             Contact Me
@@ -35,7 +35,7 @@ export default function Contact() {
           {/* Links secundarios */}
           <div className="mt-10 flex justify-center gap-8 text-slate-400">
             <a
-              href="https://github.com/tuusuario"
+              href="https://github.com/up220187"
               target="_blank"
               className="hover:text-accent transition"
             >
@@ -43,7 +43,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://linkedin.com/in/tuusuario"
+              href="https://www.linkedin.com/in/reyna-del-carmen-martinez-gomez-1608b0270/"
               target="_blank"
               className="hover:text-accent transition"
             >
@@ -51,7 +51,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="mailto:tuemail@gmail.com"
+              href="mailto:reyna.martinez.gmz@gmail.com"
               className="hover:text-accent transition"
             >
               Email

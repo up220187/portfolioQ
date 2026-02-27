@@ -20,7 +20,7 @@ export default function Projects() {
         >
           <h2 className="text-3xl font-semibold">Projects</h2>
           <p className="text-slate-400 mt-4">
-            Algunos proyectos destacados donde aplico arquitectura estructurada y diseño moderno.
+             Proyectos destacados donde aplico arquitectura estructurada y diseño moderno.
           </p>
         </motion.div>
 

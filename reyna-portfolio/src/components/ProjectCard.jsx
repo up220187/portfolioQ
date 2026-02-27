@@ -23,7 +23,7 @@ export default function ProjectCard({ project }) {
       viewport={{ once: true }}
     >
       {/* Imagen */}
-      <div className="relative h-56 overflow-hidden">
+      <div className="relative w-full aspect-[5/3] overflow-hidden rounded-xl">
         <img
           src={project.images[current]}
           alt={project.title}
@@ -70,13 +70,6 @@ export default function ProjectCard({ project }) {
 
         {/* Botones */}
         <div className="flex gap-4">
-          <a
-            href={project.demo}
-            className="bg-accent px-4 py-2 rounded-xl text-sm font-medium hover:bg-accentSoft transition"
-          >
-            Live Demo
-          </a>
-
           <a
             href={project.github}
             className="border border-accent px-4 py-2 rounded-xl text-sm font-medium hover:bg-accent/10 transition"

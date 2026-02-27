@@ -34,18 +34,20 @@ export default function Hero() {
         </p>
 
           <div className="space-x-4">
+
+            <a
+              href=""
+              className="bg-accent px-6 py-3 rounded-xl font-medium hover:bg-accentSoft transition"
+            >
+              
+            </a>
             <a
               href="#projects"
-              className="bg-accent px-6 py-3 rounded-xl font-medium hover:bg-accentSoft transition"
+              className="bg-accent px-6 py-3 rounded-xl font-medium hover:bg-accentSoft transition color-slate-100"
             >
               Ver proyectos
             </a>
-            <a
-              href="#contact"
-              className="border border-accent px-6 py-3 rounded-xl font-medium hover:bg-accent/10 transition"
-            >
-              Contacto
-            </a>
+      
           </div>
         </motion.div>
       </div>
