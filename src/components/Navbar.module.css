@@ -76,7 +76,10 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 10px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
 }
 
 .bar {
@@ -142,5 +145,6 @@
 
   .mobileMenu .link {
     font-size: 1.125rem;
+    padding: 0.5rem 0;
   }
 }

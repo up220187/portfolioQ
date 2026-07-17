@@ -27,6 +27,16 @@
   transition: color 0.3s ease;
 }
 
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 1.25rem;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+  }
+}
+
 .categories {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
