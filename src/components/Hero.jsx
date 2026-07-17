@@ -37,8 +37,8 @@ export default function Hero() {
 
           <div className={styles.ctaGroup}>
             <a
-              href="/CV_Reyna_Martinez.pdf"
-              download="CV_Reyna_Martinez.pdf"
+              href="/CV_Reyna Martinez.pdf"
+              download="CV_Reyna Martinez.pdf"
               className={styles.ctaPrimary}
             >
               Descargar CV
