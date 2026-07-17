@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
+import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -11,24 +14,40 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  return (
-    <nav
-      className={`fixed w-full z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-secondaryBg/80 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center text-slate-200">
-        <h1 className="font-semibold text-lg">Reyna Martinez</h1>
+  const closeMenu = () => setIsOpen(false);
 
-        <div className="space-x-6 hidden md:block">
-          <a href="#about" className="hover:text-accent transition">About</a>
-          <a href="#skills" className="hover:text-accent transition">Skills</a>
-          <a href="#projects" className="hover:text-accent transition">Projects</a>
-          <a href="#contact" className="hover:text-accent transition">Contact</a>
+  return (
+    <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ""}`}>
+      <div className={styles.container}>
+        <h1 className={styles.brand}>Reyna Martinez</h1>
+
+        <div className={styles.links}>
+          <a href="#skills" className={styles.link}>Skills</a>
+          <a href="#projects" className={styles.link}>Projects</a>
+          <a href="#contact" className={styles.link}>Contact</a>
+          <ThemeToggle />
         </div>
+
+        <button
+          className={`${styles.hamburger} ${isOpen ? styles.hamburgerOpen : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
+        >
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+          <span className={styles.bar}></span>
+        </button>
       </div>
+
+      {isOpen && (
+        <div className={styles.mobileMenu}>
+          <a href="#skills" className={styles.link} onClick={closeMenu}>Skills</a>
+          <a href="#projects" className={styles.link} onClick={closeMenu}>Projects</a>
+          <a href="#contact" className={styles.link} onClick={closeMenu}>Contact</a>
+          <ThemeToggle />
+        </div>
+      )}
     </nav>
   );
 }

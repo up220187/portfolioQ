@@ -1,17 +1,27 @@
+import { useThemeEffect } from "./hooks/useThemeEffect";
+import { useReveal } from "./hooks/useReveal";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Skills from "./components/Skills";
+import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import FigmaShowcase from "./components/FigmaShowcase";
+import Certifications from "./components/Certifications";
 
 export default function App() {
+  useThemeEffect();
+  useReveal();
+
   return (
-<div className="font-sans bg-primaryBg text-textPrimary min-h-screen">      <Navbar />
+    <div>
+      <Navbar />
       <Hero />
-      <About />
       <Skills />
+      <Experience />
       <Projects />
+      <FigmaShowcase />
+      <Certifications />
       <Contact />
     </div>
   );
